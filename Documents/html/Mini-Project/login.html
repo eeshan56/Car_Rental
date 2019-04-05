@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mini Project: Car Rental - Sign Up/Login</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+<body class="loginPage">
+	<nav>
+		<ul>
+			<li class="SiteLogo">
+				<img src="img/car_rental_icon.png" id="site-logo">
+			</li>
+			<li>
+				<a href="index.html">HOME</a>
+			</li>
+			<li>
+				<a href="about.html">ABOUT</a>
+			</li>
+			<li>
+				<a href="cars.html">CARS</a>
+			</li>
+			<li>
+				<a href="contact.html">CONTACT</a>
+			</li>
+			<li class="LoginMenu">
+				<a href="login.html">SIGN UP/LOGIN</a>
+			</li>
+		</ul>
+	</nav>
+	<br><br>
+	<center>
+		<div class="BorderTab">
+			<input class="tablinks" id="sign_up_tab" type="button" name="sign_up" onclick="openTab(event, 'Sbox')" value="Sign Up">
+			<script>
+				// Get the element with id="defaultOpen" and click on it
+				document.getElementById("sign_up_tab").click();
+			</script>
+			<input class="tablinks" id="login_tab" type="button" name="login" onclick="openTab(event, 'Lbox')" value="Login">
+		</div>
+		<div class="tabcontent" id="Sbox">
+			<p></p>
+			<br>
+			<img src="img/avatar.svg" width="120" height="120">
+			<br>
+			<div class="textbox">
+				<i class="fas fa-user"></i>
+				<input type="text" placeholder="Full Name" name="user_full_name">
+			</div>
+			<br>
+			<div class="textbox">
+				<i class="fas fa-envelope"></i>
+				<input type="text" placeholder="Email" name="email1">
+			</div>
+			<br>
+			<div class="textbox">
+				<i class="fas fa-lock"></i>
+				<input type="password" placeholder="Password" name="password1">
+			</div>
+			<br>
+			<input class="btn" type="button" name="sign_up_btn" value="SIGN UP">
+		</div>
+		<div class="tabcontent" id="Lbox">
+			<p></p>
+			<br>
+			<img src="img/avatar.svg" width="120" height="120">
+			<br>
+			<div class="textbox">
+				<i class="fas fa-envelope"></i>
+				<input type="text" placeholder="Email" name="email2">
+			</div>
+			<br>
+			<div class="textbox">
+				<i class="fas fa-lock"></i>
+				<input type="password" placeholder="Password" name="password2">
+			</div>
+			<br>
+			<input class="btn" type="button" name="login_btn" value="LOGIN">
+		</div>
+	</center>
+	<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

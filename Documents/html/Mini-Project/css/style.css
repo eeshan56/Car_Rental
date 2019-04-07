@@ -58,7 +58,7 @@ body.loginPage {
 }
 
 .tablinks {
-	width: 341px;
+	width: 241px;
 	height: 64px;
 	display: block;
 	float: left;
@@ -70,6 +70,16 @@ body.loginPage {
 	padding: 14px 16px;
 	border: 1px solid #ffa700;
 	font-family: montserrat_regular;
+}
+
+#sign_up_tab {
+	border-top-left-radius: 30px;
+	border-bottom-left-radius: 30px;
+}
+
+#login_tab {
+	border-top-right-radius: 30px;
+	border-bottom-right-radius: 30px;
 }
 
 .tablinks:hover {
@@ -94,12 +104,11 @@ div.tabcontent {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	border: 1px solid #ffa700;
 	
-	background: linear-gradient(
+	/*background: linear-gradient(
           rgba(0, 0, 0, 0.5), 
           rgba(0, 0, 0, 0.5)
-    );
+    );*/
 }
 
 div#Lbox {
@@ -110,8 +119,8 @@ div#Lbox {
 	width: 90%;
 	overflow: hidden;
 	font-size: 20px;
-	padding: 18px 0;
-	margin: 18px 0;
+	padding: 13px 0;
+	margin: 13px 0;
 	border-bottom: 1px solid #ffa700;
 	color: white;
 }
@@ -155,6 +164,11 @@ div#Lbox {
 	background: transparent;
 	color: #ffa700;
 	transition: 0.3s ease;
+}
+
+#user_error, #email_error1, #email_error2, #passwd_error1, #passwd_error2, #ph_error {
+	color: red;
+	font-family: montserrat_regular;
 }
 
 nav {

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mini Project: Car Rental - Sign Up/Login</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+<body class="loginPage">
+	<nav>
+		<ul>
+			<li class="SiteLogo">
+				<img src="img/car_rental_icon.png" id="site-logo">
+			</li>
+			<li>
+				<a href="index.html">HOME</a>
+			</li>
+			<li>
+				<a href="about.html">ABOUT</a>
+			</li>
+			<li>
+				<a href="cars.html">CARS</a>
+			</li>
+			<li>
+				<a href="contact.html">CONTACT</a>
+			</li>
+			<li class="LoginMenu">
+				<a href="login.html">SIGN UP/LOGIN</a>
+			</li>
+		</ul>
+	</nav>
+	<br><br>
+	<center>
+		<div class="BorderTab">
+			<input class="tablinks" id="sign_up_tab" type="button" name="sign_up" onclick="openTab(event, 'Sbox')" value="Sign Up">
+			<script>
+				// Get the element with id="defaultOpen" and click on it
+				document.getElementById("sign_up_tab").click();
+			</script>
+			<input class="tablinks" id="login_tab" type="button" name="login" onclick="openTab(event, 'Lbox')" value="Login">
+		</div>
+		<form action="signup" method="post" id="signup_form" name="SignUpForm" onsubmit="return validateSignUp()">
+			<div class="tabcontent" id="Sbox">
+				<p></p>
+				<br>
+				<br>
+				<img src="img/avatar.svg" width="120" height="120">
+				<br>
+				<div class="textbox">
+					<i class="fas fa-user"></i>
+					<input type="text" placeholder="Full Name" name="user_full_name" required>
+				</div>
+				<p id="user_error"></p>
+				<br>
+				<div class="textbox">
+					<i class="fas fa-envelope"></i>
+					<input type="text" placeholder="Email" name="email1" required onkeyup="validateEmail1()">
+				</div>
+				<p id="email_error1"></p>
+				<br>
+				<div class="textbox">
+					<i class="fas fa-phone-square fa-rotate-90"></i>
+					<input type="text" placeholder="Phone Number" name="ph_no" required onkeyup="validatePhone()">
+				</div>
+				<p id="ph_error"></p>
+				<br>
+				<div class="textbox">
+					<i class="fas fa-lock"></i>
+					<input type="password" placeholder="Password" name="password1" required onkeyup="validatePassword1()">
+				</div>
+				<p id="passwd_error1"></p>
+				<br>
+				<input class="btn" type="submit" name="sign_up_btn" value="SIGN UP">
+			</div>
+		</form>
+		<form action="login" method="post" name="LoginForm" id="login_form" onsubmit="return validateLogin()">
+			<div class="tabcontent" id="Lbox">
+				<p></p>
+				<br>
+				<img src="img/avatar.svg" width="120" height="120">
+				<br>
+				<div class="textbox">
+					<i class="fas fa-envelope"></i>
+					<input type="text" placeholder="Email" name="email2" required onkeyup="validateEmail2()">
+				</div>
+				<p id="email_error2"></p>
+				<br>
+				<div class="textbox">
+					<i class="fas fa-lock"></i>
+					<input type="password" placeholder="Password" name="password2" required onkeyup="validatePassword2()">
+				</div>
+				<p id="passwd_error2"></p>
+				<br>
+				<input class="btn" type="submit" name="login_btn" value="LOGIN">
+			</div>
+		</form>
+	</center>
+	<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
